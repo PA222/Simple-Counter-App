@@ -1,0 +1,78 @@
+/* Center everything on the screen */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 280px;
+}
+
+.title {
+    margin: 0;
+    color: #4a5568;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#display {
+    font-size: 6rem;
+    font-weight: 800;
+    margin: 20px 0;
+    color: #2d3748;
+    transition: all 0.3s ease;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.btn {
+    flex: 1;
+    height: 60px;
+    border: none;
+    border-radius: 16px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.1s, background 0.3s, opacity 0.3s;
+}
+
+.btn-minus { background-color: #f56565; } /* Red */
+.btn-plus { background-color: #48bb78; }  /* Green */
+
+.btn:hover:not(:disabled) {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+}
+
+.btn:active:not(:disabled) {
+    transform: translateY(1px);
+}
+
+.btn:disabled {
+    background-color: #cbd5e0;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+#message {
+    margin-top: 20px;
+    color: #e53e3e;
+    font-size: 0.9rem;
+    font-weight: bold;
+    visibility: hidden; /* Hidden by default */
+}
